@@ -64,11 +64,11 @@ namespace RestSharpLibrary.Tests
             Assert.AreEqual(HttpStatusCode.OK, putResponse.StatusCode, "Status code is not equal to 201");
             Assert.AreEqual(updatedBookingData.Firstname, booking.Firstname, "First Name is not matching.");
             Assert.AreEqual(updatedBookingData.Lastname, booking.Lastname, "Last Name is not matching.");
-            Assert.AreEqual(updatedBookingData.Totalprice, booking.Totalprice, "Total price is not matching.");
-            Assert.AreEqual(updatedBookingData.Depositpaid, booking.Depositpaid, "Deposit paid is not matching.");
+            Assert.AreEqual(updatedBookingData.Totalprice, postCreatedBooking.Booking.Totalprice, "Total price is not matching.");
+            Assert.AreEqual(updatedBookingData.Depositpaid, postCreatedBooking.Booking.Depositpaid, "Deposit paid is not matching.");
             Assert.AreEqual(updatedBookingData.Bookingdates.Checkin, postCreatedBooking.Booking.Bookingdates.Checkin, "Check in date is not matching.");
             Assert.AreEqual(updatedBookingData.Bookingdates.Checkout, postCreatedBooking.Booking.Bookingdates.Checkout, "Check out date is not matching.");
-            Assert.AreEqual(updatedBookingData.Additionalneeds, booking.Additionalneeds, "Additional needs is not matching.");
+            Assert.AreEqual(updatedBookingData.Additionalneeds, postCreatedBooking.Booking.Additionalneeds, "Additional needs is not matching.");
 
 
             //Cleanup
